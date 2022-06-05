@@ -36,6 +36,7 @@ pip install PyMySQL
     * 按下**Publish Branch**
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_6.png">
     <br>
+    * Github中即可看到新建立的Branch
 
 
 
