@@ -26,7 +26,9 @@ pip install PyMySQL
 7. 建立其他Branches 
     * 按下```Ctrl+Shift+P```並打入```Git Checkout to```
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_3.png">
-    
+    * 選擇```Create new branch```
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_4.png">
+
 
 
 
