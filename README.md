@@ -28,6 +28,10 @@ pip install PyMySQL
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_3.png">
     * 選擇```Create new branch```
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_4.png">
+    * 輸入新的branch名稱
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_5.png">
+    * 按下```Publish Branch```
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_6.png">
 
 
 
