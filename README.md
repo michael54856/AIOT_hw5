@@ -19,6 +19,11 @@ pip install numpy
 pip install six
 pip install PyMySQL
 ```
+6. 為了要能夠Upload File到Github,要先設定一些識別資料
+    * C:> git config --global user.name "Michael WANG"
+    * C:> git config --global user.email michael548562@gmail.com
+
+
 
 
 
