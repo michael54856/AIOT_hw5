@@ -8,5 +8,7 @@
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_1.png"><br>
     2. 貼上我們剛剛建立的repository網址```https://github.com/michael54856/AIOT_hw5.git```
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_2.png">
+5. 用 ```Ctrl+```叫出Terminal並安裝所需要的套件
+
 
 
