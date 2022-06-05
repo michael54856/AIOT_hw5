@@ -27,13 +27,13 @@ pip install PyMySQL
     * 按下```Ctrl+Shift+P```並打入```Git Checkout to```
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_3.png">
     <br>
-    * 選擇```Create new branch```
+    * 選擇**Create new branch**
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_4.png">
     <br>
     * 輸入新的branch名稱
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_5.png">
     <br>
-    * 按下```Publish Branch```
+    * 按下**Publish Branch**
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_6.png">
 
 
