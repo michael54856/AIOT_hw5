@@ -1,3 +1,6 @@
-# AIoT Flask Web
+# Step 1 : Development Environment Setup
 
-## 本次作業將建立一個Flask Web,詳細的步驟在各個Branch中 asdqwe
+1. 註冊 [Github](https://github.com/)
+2. 下載 [Visual Studio Code](https://code.visualstudio.com/) 和 [XAMPP](https://www.apachefriends.org/zh_tw/download.html)
+
+
