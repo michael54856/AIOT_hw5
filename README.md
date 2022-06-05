@@ -5,10 +5,20 @@
 3. 在[Github](https://github.com/)中建立一個新的repository (**AIOT_hw5**)
 4. 到**Visual Studio Code** clone這個新建立的專案
     1. 按下```Ctrl+Shift+P```並打入```Git Clone```
-    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_1.png"><br>
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_1.png">
+    <br>
     2. 貼上我們剛剛建立的repository網址```https://github.com/michael54856/AIOT_hw5.git```
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_2.png">
 5. 用 ```Ctrl+```叫出Terminal並安裝所需要的套件
+```python
+pip intsall gunicorn   
+pip install Flask 
+pip install Jinja2 
+pip install psycopg2 
+pip install sklearn 
+pip install pandas  
+pip install numpy 
+```
 
 
 
