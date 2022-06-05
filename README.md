@@ -23,7 +23,10 @@ pip install PyMySQL
     * C:> git config --global user.name "Michael Wang"
     * C:> git config --global user.email michael548562@gmail.com
 
-7. 建立Branches
+7. 建立其他Branches 
+    * 按下```Ctrl+Shift+P```並打入```Git Checkout to```
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step1-Development-Environment-Setup/Image/step1_3.png">
+    
 
 
 
