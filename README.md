@@ -230,4 +230,10 @@ def getData():
     * Random後
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_4.png">
 
+12. 完成，在local deploy
+    * Call Random
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_5.png">
+    * Call AI
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_6.png">
+
     
