@@ -49,3 +49,14 @@ app = Flask(__name__)
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
 ```
+
+5. 先定義基礎的路由，如果是一開始進去會回傳```indexAI.html```，如果進入```/noAI```會回傳```indexNoAI.html```
+```python
+@app.route("/")
+def index():
+    return render_template('indexAI.html')
+
+@app.route("/noAI")
+def noAI():
+    return render_template('indexNoAI.html')    
+```
