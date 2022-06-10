@@ -1,4 +1,5 @@
-# Step 2 : Import Database
+# Step 3 : Web Using Database
+## 再來我們想要將資料庫的內容繪製在網頁上
 
 1. 開啟**XAMPP**並點選```Admin```開啟控制介面
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
