@@ -35,4 +35,17 @@ $(function () {
         .
         .
 ```
-4. 
+## Flask app撰寫
+
+4. 先import用到的library，並建立一個基礎的Flask App
+```python
+from flask import Flask, render_template, jsonify
+import pandas as pd
+from six.moves import urllib
+import json
+ 
+app = Flask(__name__)
+
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
+```
