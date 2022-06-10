@@ -4,6 +4,10 @@
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
 2. 點選使用者帳號
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_2.png">
+3. 點選新增使用者帳號
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_3.png">
+3. 使用者名稱打上```superUser```,密碼打上```123```
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_4.png">
 
 
 2. 下載 [Visual Studio Code](https://code.visualstudio.com/) , [XAMPP](https://www.apachefriends.org/zh_tw/download.html) , [Git](https://git-scm.com/)
