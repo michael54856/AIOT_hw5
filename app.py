@@ -67,9 +67,7 @@ def getData():
     result = test_df.to_dict(orient='records')
     seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
     return jsonify(seq)
-    ######### cursor close, conn close
-    c.close()
-    conn.close()
+
 
 
 @app.route("/getPredict")
@@ -95,8 +93,6 @@ def getPredict():
     
 
     import pymysql.cursors
-    #db = mysql.connector.connect(host="140.120.15.45",user="toto321", passwd="12345678", db="lightdb")
-    #conn = mysql.connector.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
     conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
     
     c = conn.cursor()
@@ -130,20 +126,6 @@ def getPredict():
         input("pause.. now show correct one above.......")
     
 
- 
-    
-    #########################################
-    '''
-    ##Example 1 ## write back mysql ###############
-    threshold =100
-    c.execute('update light set status=0 where value>'+str(threshold))
-    conn.commit()
-    #results = c.fetchall()
-    #print(type(results))
-    #print(results[:10])
-    input("pause ....update ok..........")
-    '''
-    
     
     ##Example 2 ## write back mysql ###############
     ## make all status =0
@@ -163,9 +145,6 @@ def getPredict():
     result = test_df.to_dict(orient='records')
     seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
     return jsonify(seq)
-
-
-
 
 
 
