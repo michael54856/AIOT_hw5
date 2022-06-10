@@ -1,4 +1,5 @@
 # Step 2 : Import Database
+## 我們要先建立一個資料庫並加資料匯入進去
 
 1. 開啟**XAMPP**並點選```Admin```開啟控制介面
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
