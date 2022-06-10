@@ -29,7 +29,7 @@ if __name__ == '__main__':
    app.run("127.0.0.1",5050,debug=True)
 ```
 
-3. 成果
+3. 執行```app.py```後會產生一個ip，請按下```Ctrl```後點它
 	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step3-Web-Using-Database/Image/step3_1.png">
 
 
