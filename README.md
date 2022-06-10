@@ -20,6 +20,8 @@
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_9.png">
 10. 選擇```sensor```這個資料表並點選執行
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_10.png">
+11. 最終即可看到資料表在資料庫內
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_11.png">
 
 
 
