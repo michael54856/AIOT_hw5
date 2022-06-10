@@ -30,7 +30,10 @@ if __name__ == '__main__':
 ```
 
 3. 執行```app.py```後會產生一個ip，請按下```Ctrl```後點它
-	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step3-Web-Using-Database/Image/step3_1.png">
+	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step4_1.png">
+
+4. 成功顯示網頁
+	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step4_2.png">
 
 
 
