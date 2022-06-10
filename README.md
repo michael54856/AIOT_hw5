@@ -1,7 +1,9 @@
 # Step 2 : Import Database
 
-1. 開啟XAMPP並點選```Admin```開啟控制介面
-    
+1. 開啟**XAMPP**並點選```Admin```開啟控制介面
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
+2. 點選使用者帳號
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_2.png">
 
 
 2. 下載 [Visual Studio Code](https://code.visualstudio.com/) , [XAMPP](https://www.apachefriends.org/zh_tw/download.html) , [Git](https://git-scm.com/)
