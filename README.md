@@ -60,3 +60,52 @@ def index():
 def noAI():
     return render_template('indexNoAI.html')    
 ```
+
+6. 再來我們想定義```/setRandom```的Function()
+    * 設定連接資料庫的資料，更改為superUser
+    * 引入所需要的資料處理Library
+    * 與資料庫進行連接
+    * 執行MySQL指令，去更新light value的值
+    * 執行MySQL指令，去讀取亂數後的light Value
+    * 返回得到的sequence
+```python
+@app.route("/setRandom")
+def getData():
+    #設定連接資料庫的資料，更改為superUser
+    myserver ="localhost" 
+    myuser="superUser"
+    mypassword="123"
+    mydb="aiotdb"
+    
+    #引入所需要的資料處理Library
+    debug =0
+    from  pandas import DataFrame as df
+    import pandas as pd                   
+    import numpy as np
+    import pymysql.cursors
+
+    #與資料庫進行連接
+    conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
+    c = conn.cursor()
+ 
+
+    #執行MySQL指令，去更新light value的值
+    c.execute("update sensors set value = RAND()*1000 where true")
+    conn.commit()
+    
+    #執行MySQL指令，去讀取亂數後的light Value
+    c.execute("SELECT * FROM sensors")
+    results = c.fetchall()
+    print(type(results))
+    print(results[:10])
+    if debug:
+        input("pause ....select ok..........")
+
+    test_df = df(list(results),columns=['id','time','value','temp','humi','status'])
+
+    #返回得到的sequence
+    print(test_df.head(10))
+    result = test_df.to_dict(orient='records')
+    seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
+    return jsonify(seq)
+```
