@@ -1,7 +1,7 @@
 # Step 3 : Web Using Database
 ## 再來我們想要將資料庫的內容繪製在網頁上
 
-### 首先我們要先撰寫```GetData.php``
+### 首先我們要先撰寫```GetData.php```
 
 1. 一開始要先跟資料庫進行連線，與localHost連接,使用者為superUser,密碼為123,存取aiotdb這個資料庫
 ```php
