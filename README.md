@@ -7,3 +7,11 @@
 1. 由於我們需要```亂數產生light value```與```用AI預測light```，因此我們需要兩個網頁，分別是```indexAI.html```與```indexNoAI.html```
     * 當想要產生亂數資料時 -> 載入```indexNoAI.html```
     * 當想要使用AI預測顏色時 -> 載入```indexAI.html```
+
+2. 由於我們只預測並只想顯示lights的資訊，因此我們要將Highcharts改成只顯示Light這個資訊，將series改成只顯示lights，```indexAI.html```與```indexNoAI.html```都要改
+```html
+series: [{
+    name: 'Sensor-lights',
+    data: lights
+}],
+```
