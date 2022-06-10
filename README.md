@@ -1,5 +1,9 @@
 # Step 2 : Import Database
-1. 註冊 [Github](https://github.com/)
+
+1. 開啟XAMPP並點選```Admin```開啟控制介面
+    
+
+
 2. 下載 [Visual Studio Code](https://code.visualstudio.com/) , [XAMPP](https://www.apachefriends.org/zh_tw/download.html) , [Git](https://git-scm.com/)
 3. 在[Github](https://github.com/)中建立一個新的repository (**AIOT_hw5**)
 4. 到**Visual Studio Code** clone這個新建立的專案
