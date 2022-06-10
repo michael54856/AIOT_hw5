@@ -16,7 +16,7 @@ series: [{
 }],
 ```
 
-3. ```indexAI.html```的ajax Function會連接```/getPredict```進行預測，而```indexNoAI.html```的ajax Function會連接```/setRandom``
+3. ```indexAI.html```的ajax Function會連接```/getPredict```進行預測，而```indexNoAI.html```的ajax Function會連接```/setRandom```
 ```html
 <!--indexAI.html-->
 $(function () {
