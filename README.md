@@ -217,7 +217,7 @@ def data():
 
 10. 解決方法:
 ```python
-在以下這個地方(68行)寫入:
+在以下這個地方寫入:
 @app.route("/setRandom")
 def getData():
   c.execute("update sensors set status = RAND() where true")
