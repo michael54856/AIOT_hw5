@@ -15,6 +15,14 @@ if ($mysqli -> connect_errno)
   exit();
 }
 ```
+3. 執行Query
+```php
+//3. 執行query
+$sqlcmd2 = "select * from sensors";
+$result = $mysqli -> query($sqlcmd2); //$result is a pointer
+```
+
+
 
 <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
 
