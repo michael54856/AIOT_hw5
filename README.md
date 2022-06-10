@@ -192,7 +192,7 @@ def getPredict():
 ```
 
 
-7. 最後是定義```/data.json```的Function()
+8. 最後是定義```/data.json```的Function()
 ```python
 @app.route("/data.json")
 def data():
@@ -209,10 +209,25 @@ def data():
     return jsonify(seq)
 ```
 
-8. 問題: 由於我們按下```setRandom```的按鈕時，顏色並不會亂數產生，顏色依然照舊，可由下面兩張圖發現
+9. 問題: 由於我們按下```setRandom```的按鈕時，顏色並不會亂數產生，顏色依然照舊，可由下面兩張圖發現
     * Random前
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_1.png">
     * Random後
     <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_2.png">
-9. 
+
+10. 解決方法:
+```python
+在以下這個地方(68行)寫入:
+@app.route("/setRandom")
+def getData():
+  c.execute("update sensors set status = RAND() where true")
+目的是為了讓每次的Random也能一同改變顏色,而不是沿用上一次的
+```
+
+11. 修改後Random的效果，可發現顏色也一起改了
+    * Random前
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_3.png">
+    * Random後
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step5-Flask-Using-Database-And-AI/Image/step5_4.png">
+
     

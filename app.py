@@ -51,6 +51,7 @@ def getData():
 
     #執行MySQL指令，去更新light value的值
     c.execute("update sensors set value = RAND()*1000 where true")
+    c.execute("update sensors set status = RAND() where true")
     conn.commit()
     
     #執行MySQL指令，去讀取亂數後的light Value
