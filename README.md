@@ -123,7 +123,6 @@ def getData():
     * 將提出來的ID依序將其資料庫中的sensor設為1
     * 將result編碼成json進行回傳
 ```python
-
 @app.route("/getPredict")
 def getPredict():
     #設定連接資料庫的資料，更改為superUser
@@ -191,3 +190,23 @@ def getPredict():
     seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
     return jsonify(seq)
 ```
+
+
+7. 最後是定義```/data.json```的Function()
+```python
+@app.route("/data.json")
+def data():
+    timeInterval = 1000
+    data = pd.DataFrame()
+    featureList = ['market-price', 
+                   'trade-volume']
+    for feature in featureList:
+        url = "https://api.blockchain.info/charts/"+feature+"?timespan="+str(timeInterval)+"days&format=json"
+        data['time'] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode('utf-8'))['values'])['x']*1000
+        data[feature] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode('utf-8'))['values'])['y']
+    result = data.to_dict(orient='records')
+    seq = [[item['time'], item['market-price'], item['trade-volume']] for item in result]
+    return jsonify(seq)
+```
+
+8. 執行```app.py```
