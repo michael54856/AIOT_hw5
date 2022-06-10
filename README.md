@@ -209,4 +209,10 @@ def data():
     return jsonify(seq)
 ```
 
-8. 執行```app.py```
+8. 問題: 由於我們按下```setRandom```的按鈕時，顏色並不會亂數產生，顏色依然照舊，可由下面兩張圖發現
+    * Random前
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step5_1.png">
+    * Random後
+    <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step5_2.png">
+9. 
+    
