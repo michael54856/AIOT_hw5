@@ -1,5 +1,5 @@
 # Step 5 : Flask Using Database And AI
-## 接下來我們想要透過Flask來與資料庫取得資料，並透過訓練好的AI model對資料進行預測並填入顏色
+## 接下來我們想要透過Flask來與資料庫取得資料，並透過訓練好的AI model對light這個資料進行預測並填入顏色
 
 1. 我們先簡單寫一個網頁，造訪網頁時會顯示```Hello World in static file```
 ```html
