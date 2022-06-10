@@ -39,6 +39,90 @@ echo json_encode($data);
 ```php
 $mysqli -> close();
 ```
+### 再來是網頁的主體```index.html```
+
+7. highcharsinit()會設定HighChart的一些資訊
+```html
+function highcharsinit(){
+	$('#container').highcharts({
+		title: {
+			text: 'Sensor data from MySQL to Highcharts',
+			x: -20 
+		},
+		/*subtitle: {
+			text: 'Light Value',
+			x: -20
+		},*/
+		xAxis: {
+			title: {
+			text: 'Time'
+			},
+			categories: time,
+			labels:{ //隱藏X軸的標籤
+				enabled: false,
+			}
+		},
+		yAxis: {
+			title: {
+			text: 'value',
+			}
+		},
+		//圖表的資料
+		
+		series: [{
+			name: 'Sensor-humids',
+			data: humis
+		},{
+			name: 'Sensor-temps',
+			data: temps
+		},{
+			name: 'Sensor-lights',
+			data: lights
+		}]
+	});
+}
+
+```
+
+8. 再來我們需要一個ajax Function來取得GetData.php回傳的資料，並根據status來更改顏色
+```html
+$(function () {
+	$.ajax({									  
+		url: 'GetData.php',//連接的URL	  
+		data: "{}",//夾帶的參數
+		dataType: 'json', //資料格式 
+		success: function(data)	//傳送成功的function
+			{	
+				lights = [];
+				humis=[];
+				temps = [];
+				time = [];
+				
+				for (var i =  0; i < data.length; i++)
+				{
+					if(parseInt(data[i][5])==0) //如果status是1,全部都設為紅色
+					{
+						lights.push({y:parseInt(data[i][2]), color: '#FF0000' }); 
+						humis.push({y:parseInt(data[i][4]), color: '#FF0000' });
+						temps.push({y:parseInt(data[i][3]), color: '#FF0000' });
+					}
+					else//如果status是0,lights設為綠色,humis設為藍色,temps設為黑色
+					{
+						lights.push({y:parseInt(data[i][2]), color: '#00FF00' });
+						humis.push({y:parseInt(data[i][4]), color: '#000000' });
+						temps.push({y:parseInt(data[i][3]), color: '#0000FF' });
+					}
+					time.push(data[i][1]);
+				}
+				highcharsinit();
+				} //success end
+
+		}); //ajax end
+
+	}); //function end
+```
+
+
 
 <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
 
