@@ -1,48 +1,9 @@
 # Step 5 : Flask Using Database And AI
 ## 接下來我們想要透過Flask來與資料庫取得資料，並透過訓練好的AI model對light這個資料進行預測並填入顏色
+<br>
 
-1. 我們先簡單寫一個網頁，造訪網頁時會顯示```Hello World in static file```
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2> Hello World in static file</h2>
-</body>
-</html>
-```
-2. 再來我們將使用Flask來顯示網頁
-```python
-from flask import Flask
-app = Flask(__name__)
+## 網頁修改
 
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
-
-if __name__ == '__main__':
-   app.run("127.0.0.1",5050,debug=True)
-```
-
-3. 執行```app.py```後會產生一個ip，請按下```Ctrl```後點它
-	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step4_1.png">
-
-4. 成功顯示網頁
-	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step4-Simple-Flask/Image/step4_2.png">
-
-
-
-
-
-
-
-
-
-
-
-
+1. 由於我們需要```亂數產生light value```與```用AI預測light```，因此我們需要兩個網頁，分別是```indexAI.html```與```indexNoAI.html```
+    * 當想要產生亂數資料時 -> 載入```indexNoAI.html```
+    * 當想要使用AI預測顏色時 -> 載入```indexAI.html```
