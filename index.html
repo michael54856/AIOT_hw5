@@ -44,14 +44,14 @@
 			//圖表的資料
 			
 			series: [{
-				name: 'Sensor-lights',
-				data: lights
-			},{
 				name: 'Sensor-humids',
 				data: humis
 			},{
 				name: 'Sensor-temps',
 				data: temps
+			},{
+				name: 'Sensor-lights',
+				data: lights
 			}]
 		});
 	}
@@ -77,9 +77,9 @@
 							humis.push({y:parseInt(data[i][4]), color: '#FF0000' });
 							temps.push({y:parseInt(data[i][3]), color: '#FF0000' });
 						}else{
-							lights.push({y:parseInt(data[i][2]), color: '#0000FF' });
+							lights.push({y:parseInt(data[i][2]), color: '#00FF00' });
 							humis.push({y:parseInt(data[i][4]), color: '#000000' });
-							temps.push({y:parseInt(data[i][3]), color: '#00FF00' });
+							temps.push({y:parseInt(data[i][3]), color: '#0000FF' });
 						}
 						time.push(data[i][1]);
 					}

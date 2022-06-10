@@ -122,9 +122,8 @@ $(function () {
 	}); //function end
 ```
 
-
-
-<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
+9. 在localHost上進行測試,成功產生HighChart
+	<img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step3-Web-Using-Database/Image/step3_1.png">
 
 
 
