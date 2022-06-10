@@ -24,12 +24,21 @@ $result = $mysqli -> query($sqlcmd2); //$result is a pointer
 ```php
 $data; //array
 $i=0;
-while ($row=mysqli_fetch_array($result,MYSQLI_NUM)){
+while ($row=mysqli_fetch_array($result,MYSQLI_NUM))
+{
 	$data[$i]=$row;
 	$i ++;
 }
 ```
+5. 將資料編碼成json格式返回
+```php
+echo json_encode($data);
+```
 
+6. 關閉連線
+```php
+$mysqli -> close();
+```
 
 <img src="https://raw.githubusercontent.com/michael54856/AIOT_hw5/Step2-Import-Database/Image/step2_1.png">
 
