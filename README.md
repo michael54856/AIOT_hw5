@@ -109,3 +109,85 @@ def getData():
     seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
     return jsonify(seq)
 ```
+
+
+7. 再來我們想定義```/getPredict```的Function()
+    * 設定連接資料庫的資料，更改為superUser
+    * 引入所需要的資料處理Library
+    * 使用pickle + gzip去開啟訓練好的Model
+    * 與資料庫進行連接
+    * 執行MySQL的指令，去sensors資料表讀取資料
+    * 之後我們將資料進行reshape，之後餵進Model中進行預測，testY只會有0或1
+    * 執行MySQL指令，讓status一開始全為0
+    * 再來將status = 1的ID提取出來
+    * 將提出來的ID依序將其資料庫中的sensor設為1
+    * 將result編碼成json進行回傳
+```python
+
+@app.route("/getPredict")
+def getPredict():
+    #設定連接資料庫的資料，更改為superUser
+    myserver ="localhost"
+    myuser="superUser"
+    mypassword="123"
+    mydb="aiotdb"
+    
+    #引入所需要的資料處理Library
+    debug =0
+    from  pandas import DataFrame as df
+    import pandas as pd                     
+    import numpy as np
+
+    #使用pickle + gzip去開啟訓練好的Model
+    import pickle
+    import gzip
+    with gzip.open('./model/myModel.pgz', 'r') as f:
+        model = pickle.load(f)
+
+    #與資料庫進行連接
+    import pymysql.cursors
+    conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
+    c = conn.cursor()
+    if debug:
+        input("pause.. conn.cursor() ok.......")
+    
+    #執行MySQL的指令，去sensors資料表讀取資料
+    c.execute("SELECT * FROM sensors")
+    results = c.fetchall()
+    print(type(results))
+    print(results[:10])
+    if debug:
+        input("pause ....select ok..........")
+    
+
+    #之後我們將資料進行reshape，之後餵進Model中進行預測，testY只會有0或1
+    test_df = df(list(results),columns=['id','time','value','temp','humi','status'])
+    print(test_df.head(10))
+    testX=test_df['value'].values.reshape(-1,1)
+    testY=model.predict(testX)
+    print(model.score(testX,testY))
+    
+    test_df['status']=testY
+    print(test_df.head(10))
+    
+    if debug:
+        input("pause.. now show correct one above.......")
+    
+    #執行MySQL指令，讓status一開始全為0
+    c.execute('update sensors set status=0 where value>0')
+    
+    #再來將status = 1的ID提取出來
+    id_list=list(test_df[test_df['status']==1].id)
+    print(id_list)
+
+    #將提出來的ID依序將其資料庫中的sensor設為1
+    for _id in id_list:
+        c.execute('update sensors set status=1 where id='+str(_id))
+    
+    conn.commit()
+    
+    #將result編碼成json進行回傳
+    result = test_df.to_dict(orient='records')
+    seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
+    return jsonify(seq)
+```
