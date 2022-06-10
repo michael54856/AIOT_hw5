@@ -31,19 +31,18 @@ def noAI():
 
 @app.route("/setRandom")
 def getData():
-    myserver ="localhost"
-    myuser="test123"
-    mypassword="test123"
+    #更改為superUser
+    myserver ="localhost" 
+    myuser="superUser"
+    mypassword="123"
     mydb="aiotdb"
     
     debug =0
     from  pandas import DataFrame as df
-    import pandas as pd                     # 引用套件並縮寫為 pd
+    import pandas as pd                   
     import numpy as np
-
     import pymysql.cursors
-    #db = mysql.connector.connect(host="140.120.15.45",user="toto321", passwd="12345678", db="lightdb")
-    #conn = mysql.connector.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
+
     conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
 
     c = conn.cursor()
@@ -77,8 +76,8 @@ def getData():
 def getPredict():
     #==== step 1: setup variable ===========
     myserver ="localhost"
-    myuser="test123"
-    mypassword="test123"
+    myuser="superUser"
+    mypassword="123"
     mydb="aiotdb"
     
     debug =0
